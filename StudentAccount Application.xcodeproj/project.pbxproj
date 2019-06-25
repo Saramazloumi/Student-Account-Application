@@ -13,6 +13,11 @@
 		3020F1A522C27B4500E6D2A8 /* StudentAccount_Application.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3020F1A322C27B4500E6D2A8 /* StudentAccount_Application.xcdatamodeld */; };
 		3020F1A722C27B4600E6D2A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3020F1A622C27B4600E6D2A8 /* Assets.xcassets */; };
 		3020F1AA22C27B4600E6D2A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3020F1A822C27B4600E6D2A8 /* LaunchScreen.storyboard */; };
+		3020F1B522C27CE900E6D2A8 /* UserDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020F1B422C27CE900E6D2A8 /* UserDao.swift */; };
+		3020F1B722C2911400E6D2A8 /* UserCreateForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020F1B622C2911400E6D2A8 /* UserCreateForm.swift */; };
+		3020F1B922C2916400E6D2A8 /* SettingCreateForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020F1B822C2916400E6D2A8 /* SettingCreateForm.swift */; };
+		3020F1BB22C2976200E6D2A8 /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020F1BA22C2976200E6D2A8 /* SwitchCell.swift */; };
+		3020F1BD22C2977200E6D2A8 /* StepperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020F1BC22C2977200E6D2A8 /* StepperCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		3020F1A622C27B4600E6D2A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3020F1A922C27B4600E6D2A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3020F1AB22C27B4600E6D2A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3020F1B422C27CE900E6D2A8 /* UserDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDao.swift; sourceTree = "<group>"; };
+		3020F1B622C2911400E6D2A8 /* UserCreateForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreateForm.swift; sourceTree = "<group>"; };
+		3020F1B822C2916400E6D2A8 /* SettingCreateForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCreateForm.swift; sourceTree = "<group>"; };
+		3020F1BA22C2976200E6D2A8 /* SwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
+		3020F1BC22C2977200E6D2A8 /* StepperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,44 @@
 		3020F19B22C27B4500E6D2A8 /* StudentAccount Application */ = {
 			isa = PBXGroup;
 			children = (
+				3020F1B322C27B6700E6D2A8 /* Controller */,
+				3020F1B222C27B6100E6D2A8 /* View */,
+				3020F1B122C27B5700E6D2A8 /* Model */,
 				3020F19C22C27B4500E6D2A8 /* AppDelegate.swift */,
-				3020F19E22C27B4500E6D2A8 /* ViewController.swift */,
-				3020F1A022C27B4500E6D2A8 /* Main.storyboard */,
 				3020F1A622C27B4600E6D2A8 /* Assets.xcassets */,
 				3020F1A822C27B4600E6D2A8 /* LaunchScreen.storyboard */,
 				3020F1AB22C27B4600E6D2A8 /* Info.plist */,
 				3020F1A322C27B4500E6D2A8 /* StudentAccount_Application.xcdatamodeld */,
 			);
 			path = "StudentAccount Application";
+			sourceTree = "<group>";
+		};
+		3020F1B122C27B5700E6D2A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3020F1B422C27CE900E6D2A8 /* UserDao.swift */,
+				3020F1B622C2911400E6D2A8 /* UserCreateForm.swift */,
+				3020F1B822C2916400E6D2A8 /* SettingCreateForm.swift */,
+				3020F1BA22C2976200E6D2A8 /* SwitchCell.swift */,
+				3020F1BC22C2977200E6D2A8 /* StepperCell.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3020F1B222C27B6100E6D2A8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3020F1A022C27B4500E6D2A8 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3020F1B322C27B6700E6D2A8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3020F19E22C27B4500E6D2A8 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +178,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3020F1A522C27B4500E6D2A8 /* StudentAccount_Application.xcdatamodeld in Sources */,
+				3020F1B722C2911400E6D2A8 /* UserCreateForm.swift in Sources */,
 				3020F19F22C27B4500E6D2A8 /* ViewController.swift in Sources */,
+				3020F1BB22C2976200E6D2A8 /* SwitchCell.swift in Sources */,
 				3020F19D22C27B4500E6D2A8 /* AppDelegate.swift in Sources */,
+				3020F1B922C2916400E6D2A8 /* SettingCreateForm.swift in Sources */,
+				3020F1B522C27CE900E6D2A8 /* UserDao.swift in Sources */,
+				3020F1BD22C2977200E6D2A8 /* StepperCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,13 +1,9 @@
-//
-//  AppDelegate.swift
-//  StudentAccount Application
-//
-//  Created by Sara  on 2019-06-25.
-//  Copyright © 2019 Sara Mazloumi. All rights reserved.
-//
+
 
 import UIKit
 import CoreData
+
+var userDao: UserDao?
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +12,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        userDao = UserDao(delegate: self)
+        
+        if userDao?.getAllUsers()?.count == 0 {
+            _ = userDao?.saveUser(userCreateForm: UserCreateForm(username: "Sara", setting: SettingCreateForm(loanInterest: 2.0, studentAccount: true)))            
+            _ = userDao?.saveUser(userCreateForm: UserCreateForm(username: "Farhood", setting: SettingCreateForm(loanInterest: 3.0, studentAccount: true)))
+            _ = userDao?.saveUser(userCreateForm: UserCreateForm(username: "Fido", setting: SettingCreateForm(loanInterest: 1.0, studentAccount: false)))
+        }
         return true
     }
 
